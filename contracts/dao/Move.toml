@@ -1,0 +1,10 @@
+[package]
+name = "dao"
+version = "0.0.1"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+ntl_coin = { local = "../ntl_coin" }
+[addresses]
+dao = "0x0"
+ntl_coin = "0x70ee7a2d2517565ff0aaaee442f5950aa55f53a765674e4074f409c474011b14"

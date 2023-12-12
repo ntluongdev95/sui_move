@@ -1,0 +1,12 @@
+[package]
+name = "ntl_coin"
+version = "0.0.1"
+published-at = "0x70ee7a2d2517565ff0aaaee442f5950aa55f53a765674e4074f409c474011b14"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+
+[addresses]
+ntl_coin = "0x70ee7a2d2517565ff0aaaee442f5950aa55f53a765674e4074f409c474011b14"
+sui ="0x2"
+
