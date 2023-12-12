@@ -6,22 +6,194 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.swap-bg{
+  background: rgb(59,60,120);
+ background: linear-gradient(to bottom, rgba(59,60,120,1) 26%, rgba(113,72,140,1) 51%, rgba(13,3,22,1) 97%);
 }
+.home-bg{
+  background: rgb(60,34,167);
+background: linear-gradient(to bottom, rgba(60,34,167,1) 19%, rgba(75,61,179,1) 39%, rgba(97,88,182,1) 63%, rgba(63,46,113,1) 84%);
+}
+ .show_price{
+  width: 11.688rem;
+  padding: 0.5rem 0.6rem;
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 80px;
+  background-image: linear-gradient(#10121b,#10121b),radial-gradient(circle at left top,#ffa409,#2d324b);
+  background-origin: border-box;
+  background-clip: padding-box,border-box;
+  border: 3px double transparent;
+  max-height: 36.8px;
+  font-family: "Kanit";
+  font-weight: 600;
+  margin-right: 8px;
+}
+.connect_wallet{
+  width: 11.688rem;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 13pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color:black;
+  margin-right: 10px;
+  cursor: pointer;
+ 
+}
+.layer{
+  background-image:rgba(black,.7);
+}
+.home-section{
+  background-image: url('https://www.theeducationpeople.org/media/3562/school-leadership-democracy-blog.png?v=637350903532005668');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.event-bg{
+    background-image: url('data:image/jpeg;base64,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');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.swap-height{
+  height: calc(100vh - 80px);
+}
+.swap-input{
+  direction: rtl;
+  color:white
+}
+
+body{
+  overflow: hidden;
+}
+
+#slide{
+  width:max-content;
+}
+.container{
+  width:1000px;
+  height:600px;
+  background-color: #f5f5f5;
+  box-shadow: 0 30px 50px #dbdbdb;
+}
+.item{
+  width:200px;
+  height:300px;
+  background-position: 50% 50%;
+  display: inline-block;
+  transition: 0.5s;
+  background-size: cover;
+  position: absolute;
+  z-index: 10;
+  top:50%;
+  transform: translate(0,-50%);
+  border-radius: 20px;
+  box-shadow:  0 30px 50px #505050;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+  left:0;
+  top:0;
+  transform: translate(0,0);
+  border-radius: 0;
+  width:100%;
+  height:100%;
+  box-shadow: none;
+}
+.item:nth-child(3){
+  left:50%;
+}
+.item:nth-child(4){
+  left:calc(50% + 220px);
+}
+.item:nth-child(5){
+  left:calc(50% + 440px);
+}
+.item:nth-child(n+6){
+  left:calc(50% + 660px);
+  opacity: 0;
+}
+.item .content{
+  position: absolute;
+  top:50%;
+  left:100px;
+  width:300px;
+  text-align: left;
+  padding:0;
+  color:#eee;
+  transform: translate(0,-50%);
+  display: none;
+  font-family: system-ui;
+}
+.item:nth-child(2) .content{
+  display: block;
+  z-index: 11111;
+}
+.item .name{
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  animation:showcontent 1s ease-in-out 1 forwards
+}
+.item .des{
+  margin:20px 0;
+  opacity: 0;
+  animation:showcontent 1s ease-in-out 0.3s 1 forwards
+}
+.item .button{
+  padding:10px 20px;
+  border:none;
+  opacity: 0;
+  animation:showcontent 1s ease-in-out 0.6s 1 forwards
+}
+@keyframes showcontent{
+  from{
+      opacity: 0;
+      transform: translate(0,100px);
+      filter:blur(33px);
+  }to{
+      opacity: 1;
+      transform: translate(0,0);
+      filter:blur(0);
+  }
+}
+.buttons{
+  position: absolute;
+  bottom:30px;
+  z-index: 222;
+  left:50%;
+  width:100%;
+  
+}
+.buttons .button{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  color:white;
+  border:1px solid #fff;
+  transition: 0.5s;
+  margin-right: 20px;
+  cursor: pointer;
+}.buttons .button:hover{
+  background-color: #bac383;
+}
+
