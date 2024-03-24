@@ -2,7 +2,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { SuiWalletProvider } from './wallets/WalletProvider'
+// import { SuiWalletProvider } from './wallets/WalletProvider'
 import Header from './components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SuiWalletProvider>
+        {/* <SuiWalletProvider> */}
           {children}
-      </SuiWalletProvider>
+      {/* </SuiWalletProvider> */}
       </body>
     </html>
   )

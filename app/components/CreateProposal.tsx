@@ -1,5 +1,5 @@
 'use client'
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react"
 
 interface IProps{
     setIsDisplayed:Dispatch<SetStateAction<boolean>>

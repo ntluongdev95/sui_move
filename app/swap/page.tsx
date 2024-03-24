@@ -46,7 +46,7 @@ const SwapToken = () => {
         </Link>
         <div className="w-[60%] ">
           <ul className="flex w-full ">
-            {coins?.map((i) => (
+            {coins?.map((i:any) => (
               <li key={i.id} className="show_price items-center">
                 {i?.symbol}
                 {i.price_change_percentage_24h < 0 ? (
@@ -95,6 +95,7 @@ const SwapToken = () => {
                 </li>
             )}
           </ul>
+         
         </div>
       </header>
       <section className="swap-height w-full flex items-center justify-center">
